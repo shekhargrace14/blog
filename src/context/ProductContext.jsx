@@ -1,11 +1,19 @@
-import { createContext } from "react";
+import { createContext, useReducer } from "react";
 
-const ProductContext = createContext;
+import products from "../data/blogData.json"
+// import products from "../data/blogDataCopy.json"
+import ProductReducer from "./ProductReducer";
 
+const ProductContext = createContext();
+const initialState = {
+    products:products
+}
 const ProductProvider = ({children}) =>{
+    const [state,dispatch] = useReducer(ProductReducer, initialState)
+    console.log(state.products)
     return(
-        <ProductContext.provider value={"shekhar"}>{children}</ProductContext.provider>
+        <ProductContext.Provider value={{state,dispatch}}>{children}</ProductContext.Provider>
     )
 }
 
-export default {ProductContext, ProductProvider};
+export {ProductContext, ProductProvider};
