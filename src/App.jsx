@@ -5,6 +5,8 @@ import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Error from "./pages/Error";
+import SingleBlogPage from "./pages/SingleBlogPage";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/singleBlogPage/:id" element={<SingleBlogPage />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
