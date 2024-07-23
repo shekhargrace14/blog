@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => {
+    const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="column md:flex hidden justify-center items-center">
           <ul className="flex gap-4 pr-4">
             {menu.map((item, index) => (
-              <li key={index} className="px-4 py-2 rounded-2xl sm:grid-flow-col items-center justify-center gap-1 hover:bg-gray-100 hover:text-black">
+              <li onClick={toggleMenu} key={index} className="px-4 py-2 rounded-2xl sm:grid-flow-col items-center justify-center gap-1 hover:bg-gray-100 hover:text-black">
                 <Link to={item.path}>
                   {item.pageName}
                 </Link>

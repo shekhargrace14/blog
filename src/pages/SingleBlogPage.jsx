@@ -4,6 +4,7 @@ import { ProductContext } from '../context/ProductContext'
 import { useParams } from 'react-router-dom'
 import { FaEye, FaHeart, FaUser } from 'react-icons/fa'
 import RelatedBlogs from '../Components/RelatedBlogs'
+import { Helmet } from 'react-helmet'
 
 const singleBlogPage = () => {
     const { state: { products } } = useContext(ProductContext);
@@ -20,6 +21,11 @@ const singleBlogPage = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Home - Your Website Name</title>
+                <meta name="description" content={singleBlog.title} />
+                <meta name="keywords" content={singleBlog.title} />
+            </Helmet>
             <div className='bg-gray-800' >
                 <div className=' lg:container mx-auto  p-4  gap-4 md:flex gap-4 text-white' >
                     <div className='flex items-center md:w-4/12 h-full '>

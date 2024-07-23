@@ -14,7 +14,7 @@ const Home = () => {
       <main className='lg:flex lg:container mx-auto  p-4 gap-4'>
         <section className='w-full my-4'>
           <div className='grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4'>
-            {products.slice(0, 3).map(item => (
+            {products.map(item => (
               <Card key={item.id} item={item} />
             ))}
           </div>
