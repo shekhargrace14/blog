@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Banner = ({ title, paragraph, button }) => {
     return (
-        <div className='bg-black'>
+        <div className='bg-black p-4'>
             <div className='container mx-auto py-32 '>
                 <div className='row text-white'>
                     <div className='column  flex justify-center items-center flex-col'>
@@ -16,7 +16,7 @@ const Banner = ({ title, paragraph, button }) => {
 
                         } */}
                         {button !== null ? (
-                            <Link to={"/"} className="flex items-end my-4">
+                            <Link to={"/contact"} className="flex items-end my-4">
                                 <button className="flex items-center gap-2 justify-center py-2 px-4 border-2 border-white">
                                     {button}
                                 </button>

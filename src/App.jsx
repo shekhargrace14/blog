@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Error from "./pages/Error";
 import SingleBlogPage from "./pages/SingleBlogPage";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/singleBlogPage/:id" element={<SingleBlogPage />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 };
