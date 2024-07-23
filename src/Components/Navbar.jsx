@@ -19,8 +19,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className='bg-black text-white py-4 px-4 relative h-full'>
-      <nav className='flex justify-between items-center'>
+    <header className='bg-black text-white  relative h-full'>
+      <nav className=' lg:container mx-auto flex justify-between items-center p-4'>
         <div>
           <Link to="/">
             {/* <img className='cursor-pointer' src={logo} alt='logo' /> */}
